@@ -7,7 +7,7 @@ const launchAction = (id) => async (dispatch) => {
   });
 
   const launchData = await axios.get(successFilter(id));
-  console.log(launchData);
+
   dispatch({
     type: "LAUNCH",
     payload: {

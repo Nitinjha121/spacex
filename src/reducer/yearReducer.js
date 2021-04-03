@@ -1,6 +1,6 @@
 const intializeState = {
   yearData: [],
-  isLoading: true,
+  isLoading1: true,
 };
 
 const yearReducer = (state = intializeState, action) => {
@@ -9,11 +9,12 @@ const yearReducer = (state = intializeState, action) => {
       return {
         ...state,
         yearData: action.payload.yearData,
+        isLoading1: false,
       };
     case "LOAD":
       return {
         ...state,
-        isLoading: true,
+        isLoading1: true,
       };
     default:
       return {

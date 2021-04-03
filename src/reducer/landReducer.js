@@ -1,19 +1,20 @@
 const intializeState = {
   landData: [],
-  isLoading: true,
+  isLoading3: true,
 };
 
 const landReducer = (state = intializeState, action) => {
   switch (action.type) {
-    case "YEAR":
+    case "LAND":
       return {
         ...state,
         landData: action.payload.landData,
+        isLoading3: false,
       };
     case "LOAD":
       return {
         ...state,
-        isLoading: true,
+        isLoading3: true,
       };
     default:
       return {

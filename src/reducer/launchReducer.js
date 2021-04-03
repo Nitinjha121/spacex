@@ -1,6 +1,6 @@
 const intializeState = {
   launchData: [],
-  isLoading: true,
+  isLoading2: true,
 };
 
 const launchReducer = (state = intializeState, action) => {
@@ -9,11 +9,12 @@ const launchReducer = (state = intializeState, action) => {
       return {
         ...state,
         launchData: action.payload.launchData,
+        isLoading2: false,
       };
     case "LOAD":
       return {
         ...state,
-        isLoading: true,
+        isLoading2: true,
       };
     default:
       return {

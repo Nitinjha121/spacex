@@ -1,7 +1,7 @@
 import { allFilter } from "../api";
 import axios from "axios";
 
-const homeAction = (year) => async (dispatch) => {
+const yearAction = (year) => async (dispatch) => {
   dispatch({
     type: "LOAD",
   });
@@ -16,4 +16,4 @@ const homeAction = (year) => async (dispatch) => {
   });
 };
 
-export default homeAction;
+export default yearAction;
