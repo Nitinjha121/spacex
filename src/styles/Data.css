@@ -15,6 +15,9 @@
   background-color: #fff;
   width: 100%;
   border-radius: 8px;
+  background-image: url(../img/broken-1-removebg-preview.png);
+  min-height: 250px;
+  background-size: cover;
 }
 
 .dataCard img {
@@ -31,4 +34,5 @@
 }
 
 .dataCard__image {
+  background-color: #fff;
 }
