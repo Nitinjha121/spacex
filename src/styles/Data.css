@@ -1,0 +1,31 @@
+.dataCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  /* width: 100%; */
+  background: linear-gradient(to right, #1e90ff, #3742fa);
+  color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.dataCard__img {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.dataCard img {
+  width: 100%;
+}
+
+.dataCard__name {
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.dataCard__values {
+  font-weight: 400;
+}

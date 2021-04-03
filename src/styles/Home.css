@@ -1,0 +1,111 @@
+.home__container {
+  display: flex;
+  height: 100%;
+}
+
+.home__filter {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 100%;
+}
+
+.filter__year {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+
+  /* justify-content: space-between; */
+}
+
+.filter__containner {
+  position: relative;
+  background-color: #8bd5de;
+}
+
+.filter__yearRow {
+  text-align: center;
+  position: relative;
+}
+
+.filter__yearRow::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #ccc;
+  width: 60%;
+  position: relative;
+  margin: 4px;
+  left: 16%;
+  /* text-align: center; */
+}
+
+.filter__yearBtn {
+  background: linear-gradient(to right, #1e90ff, #3742fa);
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  /* width: 100%; */
+}
+
+.home__dataContainer {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 435px) {
+  .home__container {
+    flex-direction: column;
+  }
+
+  .home__filter {
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .filter__containner {
+  }
+}
+
+/* loader */
+
+.lds-dual-ring {
+  display: inline-block;
+  position: relative;
+  left: 40%;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
