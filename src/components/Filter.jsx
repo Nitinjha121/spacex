@@ -16,9 +16,6 @@ function Filter() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (pathname === "/") {
-      dispatch(homeAction());
-    }
     if (pathname.includes("year")) {
       dispatch(yearAction(pathname.slice(6)));
     }
@@ -33,6 +30,10 @@ function Filter() {
       return pathname.includes("true")
         ? dispatch(launchAction(true))
         : dispatch(launchAction(false));
+    }
+
+    if (pathname === "/") {
+      dispatch(homeAction());
     }
   }, [dispatch, pathname, params]);
 
